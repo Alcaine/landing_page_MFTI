@@ -1,0 +1,546 @@
+
+/*ОСНОВНЫЕ*/
+
+p
+{
+    font-family: "Franklin Gothic Book", "Arial";
+    color: #0b6bb2;
+    font-size: 23pt
+}
+
+ H1
+  {
+   font-family: "Franklin Gothic Medium", "Arial";
+   font-size: 48pt;
+  }
+ H2
+  {
+   font-family: "Franklin Gothic Medium", "Arial";
+   font-size: 22pt;
+  }  
+ H3
+  {
+   font-family: "Franklin Gothic Book", "Arial";
+   font-size: 25pt;
+   text-align: center;  
+  }    
+ body
+  {
+   font-family: "Franklin Gothic Book", "Arial";
+   font-size: 17pt;
+  }
+<table
+  {
+   border="0";
+  } 
+
+
+/*__________________________________________________*/
+
+
+
+
+/* БЛОКИ */
+ div
+  {
+    width: 1000; /* Размеры */
+    border: 0px solid #000; /* Черная рамка */
+    margin: auto; /*Центрирование*/
+    background-color: transparent;
+  }
+
+ #magic   /* Блок: о магистратуре */
+  {
+   width: 100%; /* Размеры */
+   background-color: #0b6bb2;
+   background-image: url(images/bg.png);
+   color: white;
+   background-size: 120%; 
+  }
+ #magic2
+  {
+   width: 1000; /* Размеры */
+   margin: auto;
+  }  
+ #plushki   /* Блок: уникальность, диплом и т.д. */
+  {
+   background-color: white;
+   height:  auto; /* Высота слоя */
+  } 
+     #omagistrature
+      {
+    height: auto; /* Высота слоя */
+    width: 100%; /* Размеры */
+      } 
+     #uni
+      {
+    height: auto; /* Высота слоя */
+        width: 100%; /* Размеры */
+      }       
+     #diplom
+      {
+    height: auto; /* Высота слоя */
+        width: 100%; /* Размеры */    
+      } 
+     #trud
+      {
+    height: auto; /* Высота слоя */
+        width: 100%; /* Размеры */    
+      }       
+
+ #courses  /* Блок: курсы программы */
+  {
+   height: auto;
+   width: 100%; /* Размеры */    
+   background-color: #0b6bb2;
+   color: white;
+  }   
+   #courses2
+  {
+    height: auto;
+    width: 1000; /* Размеры */    
+    background-color: #0b6bb2;
+    margin: auto; /*Центрирование*/
+    color: white;
+  }
+ #teachers   /* Блок: преподаватели */
+  {
+   width: 100%; /* Размеры */    
+   background-color: #e4e4e4;
+   height: 500px; /* Высота слоя */
+ }
+
+ #comein  /* Блок: поступление */
+  {
+   background-color: white;
+      height: auto; /* Высота слоя */
+  }     
+  #inside  /* Общий блок для всех, задающий отступы */
+  {
+        margin-left: 39%;
+    background-color: transparent;
+      width: 62%;   
+  }     
+ #faq   /* Блок: FAQ */
+  {
+    height: auto;
+   background-color: white;
+  }      
+ #parthners  /* Блок: партнеры программы */
+  {
+    height: auto;
+   background-color: #e4e4e4;
+   width: 100%;   
+  }     
+
+ #connection  /* Блок: контакты; */ 
+  {
+    height: auto;
+   width: 1000; 
+   background-size: 100%; 
+   background-color: transparent;
+   color: white;
+  }      
+  #connection_out
+  {
+    height: auto;
+   width: 100%;      
+     background-image: url(images/map.png);  
+        background-size: 100%; 
+   background-color: transparent;
+  }   
+
+
+ #gray  /* Блок: копирайт, нижнее меню */ 
+  {
+    height: auto;
+   width: 100%;     
+   background-color: gray;
+  }       
+  .citata 
+  {
+    background-color: #e4e4e4; /* Цвет фона слоя */
+    padding: 3%; /* Поля вокруг текста */
+    float: left; /* Обтекание по правому краю */
+    width: 260; /* Ширина слоя */
+    height: 360px; /* Высота слоя */
+    margin: 1%;
+    margin-right: 6%;
+    margin-bottom: 10%;
+  }
+
+    .clear 
+  {
+    clear: left; /* Отмена обтекания */
+  }
+/*__________________________________________________*/
+
+
+/* ФОРМЫ */
+input[type="text"]
+{
+ border: none; 
+ display: block;      /* Убирает рамку вокруг текстового поля */
+ background-color: transparent;
+}
+
+input[type="text"]:focus
+  { 
+  outline: none;  /* Убирает рамку вокруг текстового поля при получении фокуса*/
+  }
+
+/*__________________________________________________*/
+
+
+/* ССЫЛКИ */
+  a
+  {
+      color: #1357a5;
+    text-decoration: none;    
+  }
+#podat_doki  /* Как подать документы */
+{
+    color: white; /* Цвет текста */
+    background: #f09522; /* Цвет фона */
+    padding-left: 50px; /* Поля вокруг текста */
+    padding-right: 50px; /* Поля вокруг текста */
+    padding-top: 20px; /* Поля вокруг текста */
+    padding-bottom: 20px; /* Поля вокруг текста */
+    text-decoration: none;
+}
+
+   #podat_doki:visited {   } 
+   #podat_doki:active { background: #2c2b2b; }
+   #podat_doki:hover 
+   { 
+     background: #f8a337; /* Цвет фона */
+   }
+
+#dalee   /* кнопка: далее */
+  {
+    color: white; /* Цвет текста */
+    background:  #1357a5; /* Цвет фона */
+    padding-left: 50px; /* Поля вокруг текста */
+    padding-right: 50px; /* Поля вокруг текста */
+    padding-top: 20px; /* Поля вокруг текста */
+    padding-bottom: 20px; /* Поля вокруг текста */
+    text-decoration: none;
+  }
+
+   #dalee:visited {   } 
+   #dalee:active { background: #2c2b2b; }
+   #dalee:hover 
+   { 
+     background: #296bb6; /* Цвет фона */
+   }
+
+
+#nazad  /* кнопка: назад */
+{
+    color: #0b6bb2; /* Цвет текста */
+    background: white; /* Цвет фона */
+    padding-left: 50px; /* Поля вокруг текста */
+    padding-right: 50px; /* Поля вокруг текста */
+    padding-top: 20px; /* Поля вокруг текста */
+    padding-bottom: 20px; /* Поля вокруг текста */
+    text-decoration: none;
+}
+   #nazad:visited {   } 
+   #nazad:active { background: #2c2b2b; }
+   #nazad:hover 
+   { 
+     background: #e4e4e4; /* Цвет фона */
+   }
+
+
+  #step  /* Шаги подачи документов  */
+  {
+   
+    color: black; /* Цвет текста */
+    background: transparent; /* Цвет фона */
+    padding-left: 73px; /* Поля вокруг текста */
+    padding-right: 73px; /* Поля вокруг текста */
+    padding-top: 3px; /* Поля вокруг текста */
+    padding-bottom: 4px; /* Поля вокруг текста */
+    text-decoration: none;
+    border-bottom: solid 1px black;
+    font-size: 15pt;
+  }    
+ 
+   #step:visited {   } 
+   #step:active { color: white; border-bottom: solid 4px black;}
+   #step:hover
+    {     
+    padding-left: 65px; /* Поля вокруг текста */
+    padding-right: 65px; /* Поля вокруг текста */
+    padding-top: 0px; /* Поля вокруг текста */
+    padding-bottom: 0.5px; /* Поля вокруг текста */
+    font-size: 20pt; 
+    color: black; 
+    border-bottom: solid 4px black; 
+    }
+
+  #course /* Курсы программы */
+  {
+   
+    color: white; /* Цвет текста */
+    background: transparent; /* Цвет фона */
+    padding-left: 30px; /* Поля вокруг текста */
+    padding-right: 30px; /* Поля вокруг текста */
+    padding-top: 3px; /* Поля вокруг текста */
+    padding-bottom: 4px; /* Поля вокруг текста */
+    text-decoration: none;
+    border-bottom: solid 1px white;
+    font-size: 8pt;
+    font-weight: normal;
+  }    
+ 
+    #course:visited {   } 
+    #course:active { color: white; border-bottom: solid 4px white;}
+    #course:hover
+    {     
+    padding-left: 33px; /* Поля вокруг текста */
+    padding-right: 33px; /* Поля вокруг текста */
+    padding-top: 0px; /* Поля вокруг текста */
+    padding-bottom: 2px; /* Поля вокруг текста */
+    font-size: 9pt; 
+    color: white; 
+    border-bottom: solid 4px white; 
+    }
+
+
+
+#navigation_top  /* Верхнее меню */
+  {
+   
+    color: white; /* Цвет текста */
+    background: transparent; /* Цвет фона */
+    padding-left: 0px; /* Поля вокруг текста */
+    padding-right: 0px; /* Поля вокруг текста */
+    padding-top: 38px; /* Поля вокруг текста */
+    padding-bottom: 0px; /* Поля вокруг текста */
+    text-decoration: none;
+  }    
+   #navigation_top:visited {   } 
+   #navigation_top:active { color: white;}
+   #navigation_top:hover { color: orange; border-top: solid 4px orange; }
+
+#navigation_bottom  /* Нижнее меню */
+  {
+   
+    color: white; /* Цвет текста */
+    background: transparent; /* Цвет фона */
+    padding-left: 0px; /* Поля вокруг текста */
+    padding-right: 0px; /* Поля вокруг текста */
+    padding-top: 49px; /* Поля вокруг текста */
+    padding-bottom: 0px; /* Поля вокруг текста */
+    text-decoration: none;
+  }    
+   #navigation_bottom:visited {   } 
+   #navigation_bottom:active { color: white;}
+   #navigation_bottom:hover { color: orange; border-top: solid 4px orange; }   
+
+/*__________________________________________________*/
+
+
+/*ПРЕПОДАВАТЕЛИ*/
+/*СТРЕЛКИ*/
+/* Положение стрелок */
+
+#controls {
+    margin: -250 0 0 0;
+    width: 100%;
+    height: 50px;
+}
+
+#controls label {
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: 0.3;
+}
+
+#active {
+    margin: 23% 0 0;
+    text-align: center;
+}
+
+#active label {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #bbb;
+}
+
+#active label:hover {
+    background: #ccc;
+    border-color: #777 !important;
+}
+
+#controls label:hover {
+    opacity: 0.8;
+}
+
+/* Стиль стрелок */
+
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(5),
+#slide5:checked ~ #controls label:nth-child(1) {
+    background: url('images/next.png') no-repeat;
+    float: right;
+    margin: 0 0 0 0;
+    display: block;
+}
+
+
+#slide1:checked ~ #controls label:nth-child(5),
+#slide2:checked ~ #controls label:nth-child(1),
+#slide3:checked ~ #controls label:nth-child(2),
+#slide4:checked ~ #controls label:nth-child(3),
+#slide5:checked ~ #controls label:nth-child(4) {
+    background: url('images/prev.png') no-repeat;
+    float: left;
+    margin: 0 0 0 0;
+    display: block;
+}
+
+
+
+/* СЛАЙДЕР */
+
+input[type="radio"]
+{
+    display: none;
+}
+
+#slide1:checked ~ #slides .inner { margin-left:0; }
+#slide2:checked ~ #slides .inner { margin-left:-100%; }
+#slide3:checked ~ #slides .inner { margin-left:-200%; }
+#slide4:checked ~ #slides .inner { margin-left:-300%; }
+#slide5:checked ~ #slides .inner { margin-left:-400%; }
+
+
+#overflow 
+{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+article img 
+{
+    align:center;
+}
+
+/* Стиль фото преподавателя */
+#ava_teacher
+{
+      text-align: center;
+        float: left;
+            margin-left: 0;
+            margin-right: 30;
+            margin-bottom: 50;
+            margin-top: 0;                                    
+}
+
+
+}
+#slides
+{
+    background-color: #f1f1f1;
+}
+#slides .inner {
+    width: 500%;
+    line-height: 0;
+}
+
+#slides article {
+    width: 20%;
+    float: left;
+}
+
+
+
+/* Содержание слайда */
+
+.info {
+    line-height: 20px;
+    margin: 0 0 -150%;
+    position: absolute;
+    font-style: italic;
+    padding: 0px 0px;
+    opacity: 0;
+    color: #000;
+    text-align: left;
+}
+
+.info h3 {
+    color: #333;
+    margin: 0 0 0px;
+    font-weight: normal;
+    font-size: 22px;
+    font-style: normal;
+}
+
+
+
+/* Анимация */
+
+#slides .inner {
+    -webkit-transform: translateZ(0);
+    -webkit-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    -moz-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    -ms-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    -o-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+
+    -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    -moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    -ms-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+}
+
+#slider {
+    -webkit-transform: translateZ(0);
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+#controls label{
+    -webkit-transform: translateZ(0);
+    -webkit-transition: opacity 0.2s ease-out;
+    -moz-transition: opacity 0.2s ease-out;
+    -o-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+}
+
+#slide1:checked ~ #slides article:nth-child(1) .info,
+#slide2:checked ~ #slides article:nth-child(2) .info,
+#slide3:checked ~ #slides article:nth-child(3) .info,
+#slide4:checked ~ #slides article:nth-child(4) .info,
+#slide5:checked ~ #slides article:nth-child(5) .info {
+    opacity: 1;
+    -webkit-transition: all 1s ease-out 0.6s;
+    -moz-transition: all 1s ease-out 0.6s;
+    -o-transition: all 1s ease-out 0.6s;
+    transition: all 1s ease-out 0.6s;
+}
+
+.info, #controls, #slides, #active, #active label, .info h3, .desktop, .tablet, .mobile {
+    -webkit-transform: translateZ(0);
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+/*__________________________________________________*/
+
+
