@@ -1,6 +1,11 @@
 
 /*ОСНОВНЫЕ*/
 
+
+/**
+ * font-family, color, font-size и остальные общие свойства у всей типографики стоит вынести в body
+ * А там где нужен другой шрифт, размер, просто переопределять
+ */
 p
 {
     font-family: "Franklin Gothic Book", "Arial";
@@ -17,13 +22,13 @@ p
   {
    font-family: "Franklin Gothic Medium", "Arial";
    font-size: 22pt;
-  }  
+  }
  H3
   {
    font-family: "Franklin Gothic Book", "Arial";
    font-size: 25pt;
-   text-align: center;  
-  }    
+   text-align: center;
+  }
  body
   {
    font-family: "Franklin Gothic Book", "Arial";
@@ -32,7 +37,7 @@ p
 <table
   {
    border="0";
-  } 
+  }
 
 
 /*__________________________________________________*/
@@ -41,6 +46,15 @@ p
 
 
 /* БЛОКИ */
+
+  /**
+   * Писать стили для div нельзя, сам по себе div это просто блок, и его как правило на странице очень много, поэтому
+   * все эти стили лучше вынести в какой-нибудь класс, типа .box или .block или .wrapper-block
+   *
+   *
+   * Плюс свойство width: 1000 - не будет работать, так как не указана еденица измерения
+   * border 0px - это дефолтное значение у border div'а
+   */
  div
   {
     width: 1000; /* Размеры */
@@ -49,63 +63,73 @@ p
     background-color: transparent;
   }
 
+  /**
+   * Про ID я написал В README
+   *
+   *
+   * Здесь с секциями стоит поступить так:
+   * выделить один класс .section и на него повесить общие стили.
+   * Там не так много типов секций. Есть главная секция с картинкой на бэкграунде,
+   * есть секция с серым фоном, с белым и с основным (синим) структуру посомтреть можно тут http://omsc.mipt.ru/
+   *
+   */
  #magic   /* Блок: о магистратуре */
   {
    width: 100%; /* Размеры */
    background-color: #0b6bb2;
    background-image: url(images/bg.png);
    color: white;
-   background-size: 120%; 
+   background-size: 120%;
   }
  #magic2
   {
    width: 1000; /* Размеры */
    margin: auto;
-  }  
+  }
  #plushki   /* Блок: уникальность, диплом и т.д. */
   {
    background-color: white;
    height:  auto; /* Высота слоя */
-  } 
+  }
      #omagistrature
       {
     height: auto; /* Высота слоя */
     width: 100%; /* Размеры */
-      } 
+      }
      #uni
       {
     height: auto; /* Высота слоя */
         width: 100%; /* Размеры */
-      }       
+      }
      #diplom
       {
     height: auto; /* Высота слоя */
-        width: 100%; /* Размеры */    
-      } 
+        width: 100%; /* Размеры */
+      }
      #trud
       {
     height: auto; /* Высота слоя */
-        width: 100%; /* Размеры */    
-      }       
+        width: 100%; /* Размеры */
+      }
 
  #courses  /* Блок: курсы программы */
   {
    height: auto;
-   width: 100%; /* Размеры */    
+   width: 100%; /* Размеры */
    background-color: #0b6bb2;
    color: white;
-  }   
+  }
    #courses2
   {
     height: auto;
-    width: 1000; /* Размеры */    
+    width: 1000; /* Размеры */
     background-color: #0b6bb2;
     margin: auto; /*Центрирование*/
     color: white;
   }
  #teachers   /* Блок: преподаватели */
   {
-   width: 100%; /* Размеры */    
+   width: 100%; /* Размеры */
    background-color: #e4e4e4;
    height: 500px; /* Высота слоя */
  }
@@ -114,50 +138,50 @@ p
   {
    background-color: white;
       height: auto; /* Высота слоя */
-  }     
+  }
   #inside  /* Общий блок для всех, задающий отступы */
   {
         margin-left: 39%;
     background-color: transparent;
-      width: 62%;   
-  }     
+      width: 62%;
+  }
  #faq   /* Блок: FAQ */
   {
     height: auto;
    background-color: white;
-  }      
+  }
  #parthners  /* Блок: партнеры программы */
   {
     height: auto;
    background-color: #e4e4e4;
-   width: 100%;   
-  }     
+   width: 100%;
+  }
 
- #connection  /* Блок: контакты; */ 
+ #connection  /* Блок: контакты; */
   {
     height: auto;
-   width: 1000; 
-   background-size: 100%; 
+   width: 1000;
+   background-size: 100%;
    background-color: transparent;
    color: white;
-  }      
+  }
   #connection_out
   {
     height: auto;
-   width: 100%;      
-     background-image: url(images/map.png);  
-        background-size: 100%; 
+   width: 100%;
+     background-image: url(images/map.png);
+        background-size: 100%;
    background-color: transparent;
-  }   
+  }
 
 
- #gray  /* Блок: копирайт, нижнее меню */ 
+ #gray  /* Блок: копирайт, нижнее меню */
   {
     height: auto;
-   width: 100%;     
+   width: 100%;
    background-color: gray;
-  }       
-  .citata 
+  }
+  .citata
   {
     background-color: #e4e4e4; /* Цвет фона слоя */
     padding: 3%; /* Поля вокруг текста */
@@ -169,23 +193,29 @@ p
     margin-bottom: 10%;
   }
 
-    .clear 
+    .clear
   {
     clear: left; /* Отмена обтекания */
   }
 /*__________________________________________________*/
 
+/**
+ * В макете больше стилей у инпутов, focus outline лучше не убирать, это плохая практика,
+ * так как многие по формам переходят с помощью кнопки на клаве TAB
+ *
+ */
+
 
 /* ФОРМЫ */
 input[type="text"]
 {
- border: none; 
+ border: none;
  display: block;      /* Убирает рамку вокруг текстового поля */
  background-color: transparent;
 }
 
 input[type="text"]:focus
-  { 
+  {
   outline: none;  /* Убирает рамку вокруг текстового поля при получении фокуса*/
   }
 
@@ -196,7 +226,7 @@ input[type="text"]:focus
   a
   {
       color: #1357a5;
-    text-decoration: none;    
+    text-decoration: none;
   }
 #podat_doki  /* Как подать документы */
 {
@@ -209,10 +239,10 @@ input[type="text"]:focus
     text-decoration: none;
 }
 
-   #podat_doki:visited {   } 
+   #podat_doki:visited {   }
    #podat_doki:active { background: #2c2b2b; }
-   #podat_doki:hover 
-   { 
+   #podat_doki:hover
+   {
      background: #f8a337; /* Цвет фона */
    }
 
@@ -227,10 +257,10 @@ input[type="text"]:focus
     text-decoration: none;
   }
 
-   #dalee:visited {   } 
+   #dalee:visited {   }
    #dalee:active { background: #2c2b2b; }
-   #dalee:hover 
-   { 
+   #dalee:hover
+   {
      background: #296bb6; /* Цвет фона */
    }
 
@@ -245,17 +275,17 @@ input[type="text"]:focus
     padding-bottom: 20px; /* Поля вокруг текста */
     text-decoration: none;
 }
-   #nazad:visited {   } 
+   #nazad:visited {   }
    #nazad:active { background: #2c2b2b; }
-   #nazad:hover 
-   { 
+   #nazad:hover
+   {
      background: #e4e4e4; /* Цвет фона */
    }
 
 
   #step  /* Шаги подачи документов  */
   {
-   
+
     color: black; /* Цвет текста */
     background: transparent; /* Цвет фона */
     padding-left: 73px; /* Поля вокруг текста */
@@ -265,24 +295,24 @@ input[type="text"]:focus
     text-decoration: none;
     border-bottom: solid 1px black;
     font-size: 15pt;
-  }    
- 
-   #step:visited {   } 
+  }
+
+   #step:visited {   }
    #step:active { color: white; border-bottom: solid 4px black;}
    #step:hover
-    {     
+    {
     padding-left: 65px; /* Поля вокруг текста */
     padding-right: 65px; /* Поля вокруг текста */
     padding-top: 0px; /* Поля вокруг текста */
     padding-bottom: 0.5px; /* Поля вокруг текста */
-    font-size: 20pt; 
-    color: black; 
-    border-bottom: solid 4px black; 
+    font-size: 20pt;
+    color: black;
+    border-bottom: solid 4px black;
     }
 
   #course /* Курсы программы */
   {
-   
+
     color: white; /* Цвет текста */
     background: transparent; /* Цвет фона */
     padding-left: 30px; /* Поля вокруг текста */
@@ -293,26 +323,26 @@ input[type="text"]:focus
     border-bottom: solid 1px white;
     font-size: 8pt;
     font-weight: normal;
-  }    
- 
-    #course:visited {   } 
+  }
+
+    #course:visited {   }
     #course:active { color: white; border-bottom: solid 4px white;}
     #course:hover
-    {     
+    {
     padding-left: 33px; /* Поля вокруг текста */
     padding-right: 33px; /* Поля вокруг текста */
     padding-top: 0px; /* Поля вокруг текста */
     padding-bottom: 2px; /* Поля вокруг текста */
-    font-size: 9pt; 
-    color: white; 
-    border-bottom: solid 4px white; 
+    font-size: 9pt;
+    color: white;
+    border-bottom: solid 4px white;
     }
 
 
 
 #navigation_top  /* Верхнее меню */
   {
-   
+
     color: white; /* Цвет текста */
     background: transparent; /* Цвет фона */
     padding-left: 0px; /* Поля вокруг текста */
@@ -320,14 +350,14 @@ input[type="text"]:focus
     padding-top: 38px; /* Поля вокруг текста */
     padding-bottom: 0px; /* Поля вокруг текста */
     text-decoration: none;
-  }    
-   #navigation_top:visited {   } 
+  }
+   #navigation_top:visited {   }
    #navigation_top:active { color: white;}
    #navigation_top:hover { color: orange; border-top: solid 4px orange; }
 
 #navigation_bottom  /* Нижнее меню */
   {
-   
+
     color: white; /* Цвет текста */
     background: transparent; /* Цвет фона */
     padding-left: 0px; /* Поля вокруг текста */
@@ -335,10 +365,10 @@ input[type="text"]:focus
     padding-top: 49px; /* Поля вокруг текста */
     padding-bottom: 0px; /* Поля вокруг текста */
     text-decoration: none;
-  }    
-   #navigation_bottom:visited {   } 
+  }
+   #navigation_bottom:visited {   }
    #navigation_bottom:active { color: white;}
-   #navigation_bottom:hover { color: orange; border-top: solid 4px orange; }   
+   #navigation_bottom:hover { color: orange; border-top: solid 4px orange; }
 
 /*__________________________________________________*/
 
@@ -375,6 +405,12 @@ input[type="text"]:focus
     background: #bbb;
 }
 
+/**
+ * important использовать плохо, если important избежать нельзя, то что-то пошло не так.
+ *
+ * от important еще больше проблем, чем от id.
+ *
+ */
 #active label:hover {
     background: #ccc;
     border-color: #777 !important;
@@ -425,18 +461,27 @@ input[type="radio"]
 #slide5:checked ~ #slides .inner { margin-left:-400%; }
 
 
-#overflow 
+#overflow
 {
     width: 100%;
     height: 300px;
     overflow: hidden;
 }
 
-article img 
+article img
 {
     align:center;
 }
 
+/***
+ *
+ *
+ * margin-right: 30;
+ * margin-bottom: 50; - работать не будет так как не указана еденица измерения
+ *
+ *
+ *
+ */
 /* Стиль фото преподавателя */
 #ava_teacher
 {
@@ -445,7 +490,7 @@ article img
             margin-left: 0;
             margin-right: 30;
             margin-bottom: 50;
-            margin-top: 0;                                    
+            margin-top: 0;
 }
 
 
@@ -521,6 +566,15 @@ article img
     -o-transition: opacity 0.2s ease-out;
     transition: opacity 0.2s ease-out;
 }
+
+
+/***
+ *
+ * Писать transition: all - плохая практика, так как это замедляет немного отрисовку
+ * и может давать неочевидный результат, нужно писать transition: свойства которые должны изменяться в анимации
+ *
+ *
+ */
 
 #slide1:checked ~ #slides article:nth-child(1) .info,
 #slide2:checked ~ #slides article:nth-child(2) .info,
